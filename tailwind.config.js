@@ -4,12 +4,6 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      boxShadow:{
-        box: 'rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px'
-      }
-    },
-  },
+  theme: {},
   plugins: [],
 }

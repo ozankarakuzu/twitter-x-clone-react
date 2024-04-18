@@ -11,7 +11,7 @@ export default function Account(){
                     <img src={account.avatar} className="w-10 h-10 rounded-full" />
                     <div className="mx-3 text-[15px]">
                         <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
-                        <div className="text-[#71767b]">
+                        <div className="text-[color:var(--color-base-secondary)]">
                             @{account.userName}
                         </div>    
                     </div>
@@ -24,7 +24,7 @@ export default function Account(){
                     leave="transition duration-200 ease-out"
                     leaveFrom=" opacity-100"
                     leaveTo=" opacity-0">
-                    <Popover.Panel className="py-3 absolute bottom-[71px] w-[300px] left-1/2 -translate-x-1/2 shadow-box rounded-2xl overflow-hidden bg-[#000000]">
+                    <Popover.Panel className="py-3 absolute bottom-[71px] w-[300px] left-1/2 -translate-x-1/2 shadow-box rounded-2xl overflow-hidden bg-[color:var(--background-primary)]">
                         {(close)=>(
                             <More close={close}/>
                         )}
