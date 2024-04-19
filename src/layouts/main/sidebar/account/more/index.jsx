@@ -16,11 +16,11 @@ export default function More({close}){
                         close()
                     }}
                     className={classNames("py-3 px-4 flex items-center text-left w-full transtion-colors",{
-                    "hover:bg-[#eff3f41a]":currentAccount.id != account.id
+                    "hover:bg-[color:var(--background-secondary)]":currentAccount.id != account.id
                 })}>
                     <img src={account.avatar} className="w-10 h-10 rounded-full" />
-                    <div className="mx-3 flex-1 text-[15px]">
-                        <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
+                    <div className="mx-3 flex-1">
+                        <h6 className="font-bold leading-[1.25rem]">{account.fullName}</h6>
                         <div className="text-[color:var(--color-base-secondary)]">
                             @{account.userName}
                         </div>    
@@ -30,16 +30,16 @@ export default function More({close}){
                     )}
                 </button>
             ))}
-            <div className="h-px bg-[#2f3336] my-3"/>
-            <button className="py-3 px-4 text-left hover:bg-[#eff3f41a] w-full transtion-colors font-bold text-[15px]">
+            <div className="h-px bg-[color:var(--background-third)] my-3"/>
+            <button className="py-3 px-4 text-left hover:bg-[color:var(--background-secondary)] w-full transtion-colors font-bold">
                 Var olan bir hesap ekle
             </button>
-            <button className="py-3 px-4 text-left hover:bg-[#eff3f41a] w-full transtion-colors font-bold text-[15px]">
+            <button className="py-3 px-4 text-left hover:bg-[color:var(--background-secondary)] w-full transtion-colors font-bold">
                 Hesapları yönet
             </button>
-            <button className="py-3 px-4 text-left hover:bg-[#eff3f41a] w-full transtion-colors font-bold text-[15px] leadging-[20px]">
+            <button className="py-3 px-4 text-left hover:bg-[color:var(--background-secondary)] w-full transtion-colors font-bold leadging-[1.25rem]">
                 <div className="max-w-[228px]">
-                    @ozan_karakuzu hesabından çıkış yap
+                    @{currentAccount.username} hesabından çıkış yap
                 </div>
             </button>
         </div>

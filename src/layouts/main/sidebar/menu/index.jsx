@@ -12,14 +12,14 @@ export default function Menu(){
     return(
         <nav className="mt-0.5 mb-1" key={account}>
             {mainMenu.map((menu,index) =>(
-                <NavLink key={index} to={typeof menu.path == 'function' ? menu.path() : menu.path} className="py-[3px] block group">
+                <NavLink key={index} to={typeof menu.path == 'function' ? menu.path() : menu.path} className="py-[0.188rem] block group">
                 {({ isActive }) =>(
                         <div className={classNames("p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[color:var(--background-third)] transition-colors", {
                             "font-bold":isActive
                         })}>
-                        <div className="w-[25.26px] h-[26.25px] relative">
+                        <div className="w-[1.641rem] h-[1.641rem] relative">
                             {menu?.notifications && (
-                                <span className="w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] text-[color:var(--background-primary)] border border-[color:var(--background-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]">{menu?.notifications}</span>
+                                <span className="w-[1.125rem] h-[1.125rem] rounded-full bg-[color:var(--color-primary)] text-white border border-[color:var(--background-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[0.688rem]">{menu?.notifications}</span>
                             )}                            
                             {!isActive && menu.icon.passive}
                             {isActive && menu.icon.active}
